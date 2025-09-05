@@ -5,12 +5,37 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MP 0</title>
+  <title>mp 0</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <h1>Hello World!</h1>
-  <img src="assets/image.jpg" />
+  <div class="profile-card">
+    <label class="theme-toggle" for="theme-toggle">
+      <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+      <span class="toggle-icon">🌙</span>
+    </label>
+    <img src="assets/image.jpg" alt="Profile Picture" class="profile-image" />
+    <h1 class="profile-name">Devansh Agarwal</h1>
+    <p class="profile-email"><a href="mailto:da30@illinois.edu">da30@illinois.edu</a></p>
+    <div class="links-container">
+      <a href="https://github.com/Devanshaga1234" class="github-link">GitHub</a>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/devanshagarwal2510/" class="linkedin-link">LinkedIn</a>
+      <span class="separator">|</span>
+      <a href="assets/Devansh_Resume.pdf" class="resume-link" target="_blank">Resume</a>
+    </div>
+    <p class="bio-text">
+      Hi, I'm Devansh Agarwal, a junior at University of Illinois at Urbana-Champaign. I am majoring 
+      in Computer Engingeering with a minor in Statistics. I am interested in AI and machine learning. 
+      I am also interested in database management and data visualization. 
+    </p>
+    <p class="bio-text">
+      Over the past summer, I interned at Levrx Technologies Inc., a medtech compnay based in Troy, NY. 
+      I worked on developing an internal service for the company that saved them over 10000 dollars per month
+      in  database storage and query processing costs. 
+    </p>
+  </div>
 
   <script src="bundle.js" type="text/javascript"></script>
 </body>

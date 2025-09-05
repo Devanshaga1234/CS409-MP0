@@ -1,1 +1,158 @@
-/* Your CSS here. */
+:root {
+  --bg-color: white;
+  --card-bg: #333;
+  --text-color: white;
+  --link-color: #0077b6;
+  --separator-color: white;
+  --image-border: rgb(31, 31, 31);
+}
+
+body.dark {
+  --bg-color: white;
+  --card-bg: rgb(242, 242, 242);
+  --text-color: #333;
+  --link-color: #0077b6;
+  --separator-color: black;
+  --image-border: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  padding: 60px;
+  border-radius: 25px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.theme-checkbox {
+  display: none; 
+}
+
+.toggle-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.theme-toggle:hover .toggle-icon {
+  transform: scale(1.1);
+  background-color: var(--text-color);
+  color: var(--card-bg);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--image-border);
+  border-radius: 100px;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  object-position: center 8%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-image:hover {
+  transform: scale(1.2); 
+}
+
+.profile-name {
+  color: var(--text-color);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-name:hover {
+  transform: scale(1.1); 
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}
+
+.profile-email {
+  text-align: center;
+  font-size: 1.07em;
+  margin-bottom: 15px;
+}
+
+.profile-email a {
+  color: var(--link-color);
+  font-style: italic;
+  text-decoration: none;
+}
+
+.profile-email a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.links-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-link, .linkedin-link, .resume-link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 1.09em;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.github-link:hover, .linkedin-link:hover, .resume-link:hover {
+  color: var(--text-color);
+  text-decoration: bold;
+  transform: scale(1.2);
+}
+
+.separator {
+  color: var(--text-color);
+  margin: 0 10px;
+  font-size: 1.1em;
+}
+
+.bio-text {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: left;
+}
